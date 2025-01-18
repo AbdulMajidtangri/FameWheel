@@ -1,5 +1,4 @@
 :root {
-    --ss-primary-color: ;
     --ss-bg-color: #0000;
     --ss-font-color: #fff;
     --ss-font-placeholder-color: #ffffff80;
@@ -420,66 +419,7 @@ animation-iteration-count: infinite;
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
-@media (max-width:990px) {
-  .nav-bar{
-    display: none;
-  }
-  .nav-bar2{
-    display: block;
-  }
-  .header-m {
-    text-align: center;
-}
 
-.header-m img {
-    max-width: 200px;
-}
-
-.search-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 10px 15px;
-    max-width: 400px;
-    width: 100%;
-}
-
-.search-box input {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 16px;
-    flex: 1;
-    padding: 5px;
-}
-
-.search-box .search-icon {
-    color: #d32f2f;
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-.text p{
-display: none;
-}
-#page h3{
-  font-size: 1.8rem;
-}
-.btn,.tab-btn {
-padding: 0.5rem;
-}
-.btn, .text-button {
-  font-family: FranieR;
-  font-size: 0;
-  text-decoration: none;
-  color: #000000;
-  padding: 0.5rem;
-  border-radius: 10px;
-  margin-top: 50px;
-}
-
-}
 #main {
     position: relative;
 }
