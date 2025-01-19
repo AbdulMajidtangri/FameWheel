@@ -4,6 +4,12 @@ function locomotive() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    smartphone: {
+      smooth: true, // Enable smooth scrolling for smartphones
+    },
+    tablet: {
+      smooth: true, // Enable smooth scrolling for tablets
+    },
   });
   locoScroll.on("scroll", ScrollTrigger.update);
 
