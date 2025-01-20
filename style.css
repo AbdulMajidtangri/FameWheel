@@ -89,6 +89,10 @@ color: rgb(239, 224, 224);
 
 border: 2px solid white;
 }
+.navigation-bar .nav-bar2 {
+  display: none;
+}
+
 .logo{
     width: 20%;
     padding: 0.3rem;
@@ -623,10 +627,10 @@ button {
 
 .text-wrap {
     width: 400px;
-    height: 200px;
+    height: 300px;
     text-align: center;
+    align-items: center;
     overflow: hidden;
-    position: relative;
 }
 
 .text-wrap h3 {
@@ -660,10 +664,11 @@ button {
 }
 
 @media (max-width:760px) {
-  .nav-bar{
+
+  .navigation-bar .nav-bar {
     display: none;
   }
-  .nav-bar2{
+  .navigation-bar .nav-bar2 {
     display: block;
   }
   .header-m {
@@ -1822,26 +1827,3 @@ align-items: center;
 }
 
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-@media (max-width: 768px) {
-  canvas {
-      width: 100%; /* Ensure it scales to the screen */
-      height: auto; /* Maintain aspect ratio */
-  }
-
-  #page, #page1, #page2, #page3 {
-      display: block; /* Ensure pages are visible */
-      overflow: hidden; /* Prevent scroll issues */
-  }
-}
