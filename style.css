@@ -665,12 +665,7 @@ button {
 
 @media (max-width:760px) {
 
-  .navigation-bar .nav-bar {
-    display: none;
-  }
-  .navigation-bar .nav-bar2 {
-    display: block;
-  }
+
   .header-m {
     text-align: center;
 }
