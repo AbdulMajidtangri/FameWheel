@@ -91,11 +91,11 @@ border: 2px solid white;
 }
 .navigation-bar .nav-bar2 {
   display: none;
-}
 
+}
 .logo{
     width: 20%;
-    padding: 0.3rem;
+    padding: 0.34rem;
     overflow: hidden;
 }
 .logo img{
