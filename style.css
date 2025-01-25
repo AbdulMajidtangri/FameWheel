@@ -723,12 +723,7 @@ padding: 0.5rem;
   border-radius: 10px;
   margin-top: 50px;
 }
-canvas {
-  position: relative;
-  z-index: -1;
-  max-width: 100vw;
-  max-height: 100vh;
-}
+
 }
 .Browse-category {
   width:100%;
@@ -1789,7 +1784,12 @@ align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
   }
-  
+  canvas {
+    position: relative;
+    z-index: -1;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
   .footer-section {
     text-align: center;
   }
@@ -1804,7 +1804,12 @@ align-items: center;
   .footer-content {
     grid-template-columns: 1fr;
   }
-  
+  canvas {
+    position: relative;
+    z-index: -1;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
   .footer {
     padding: 2rem 0 0 0;
   }
@@ -1830,5 +1835,6 @@ align-items: center;
 .read-the-docs {
   color: #888;
 }
+
 
 
