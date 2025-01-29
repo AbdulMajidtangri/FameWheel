@@ -1,3 +1,108 @@
+function pagesSlider(){
+
+  const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const indicatorsContainer = document.querySelector('.slide-indicators');
+
+let currentSlide = 0;
+const totalSlides = slides.length;
+let autoSlideInterval;
+
+// Create slide indicators
+for (let i = 0; i < totalSlides; i++) {
+const indicator = document.createElement('div');
+indicator.classList.add('indicator');
+if (i === 0) indicator.classList.add('active');
+indicator.addEventListener('click', () => {
+goToSlide(i);
+resetAutoSlide();
+});
+indicatorsContainer.appendChild(indicator);
+}
+
+const indicators = document.querySelectorAll('.indicator');
+
+function updateSlider() {
+slider.style.transform = `translateX(-${currentSlide * 20}%)`;
+// Update indicators
+indicators.forEach((indicator, index) => {
+indicator.classList.toggle('active', index === currentSlide);
+});
+}
+
+function nextSlide() {
+if (currentSlide === totalSlides - 1) {
+// If at last slide, animate back to first slide
+currentSlide = 0;
+} else {
+currentSlide++;
+}
+updateSlider();
+}
+
+function prevSlide() {
+if (currentSlide === 0) {
+// If at first slide, animate to last slide
+currentSlide = totalSlides - 1;
+} else {
+currentSlide--;
+}
+updateSlider();
+}
+
+function goToSlide(index) {
+currentSlide = index;
+updateSlider();
+}
+
+// Navigation buttons
+nextBtn.addEventListener('click', () => {
+nextSlide();
+resetAutoSlide();
+});
+
+prevBtn.addEventListener('click', () => {
+prevSlide();
+resetAutoSlide();
+});
+// Auto slide functionality
+function startAutoSlide() {
+autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+function resetAutoSlide() {
+clearInterval(autoSlideInterval);
+startAutoSlide();
+}
+
+// Pause auto-slide when hovering over slider
+slider.addEventListener('mouseenter', () => {
+clearInterval(autoSlideInterval);
+});
+
+slider.addEventListener('mouseleave', () => {
+startAutoSlide();
+});
+
+// Initialize auto-slide
+startAutoSlide();
+
+// Handle keyboard navigation
+document.addEventListener('keydown', (e) => {
+if (e.key === 'ArrowLeft') {
+prevSlide();
+resetAutoSlide();
+} else if (e.key === 'ArrowRight') {
+nextSlide();
+resetAutoSlide();
+}
+});
+  };
+  pagesSlider();
+
+
 function locomotive() {
   gsap.registerPlugin(ScrollTrigger);
 
